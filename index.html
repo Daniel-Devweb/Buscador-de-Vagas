@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>underjobs - Encontre sua vaga ideal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-briefcase"></i>
+                <span>JobFinder</span>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link">Vagas</a>
+                <a href="#" class="nav-link">Empresas</a>
+                <a href="#" class="nav-link">Sobre</a>
+                <button class="btn-theme" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Encontre sua próxima oportunidade</h1>
+                <p class="hero-subtitle">Descubra milhares de vagas em empresas incríveis</p>
+                
+                <!-- Search Form -->
+                <div class="search-form">
+                    <div class="search-input-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Cargo ou empresa..." class="search-input">
+                    </div>
+                    <div class="search-input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="locationInput" placeholder="Localização..." class="search-input">
+                    </div>
+                    <button class="btn-search" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                        Buscar
+                    </button>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters">
+                    <select id="tipoFilter" class="filter-select">
+                        <option value="">Tipo de contrato</option>
+                        <option value="CLT">CLT</option>
+                        <option value="PJ">PJ</option>
+                        <option value="Freelancer">Freelancer</option>
+                        <option value="Estágio">Estágio</option>
+                    </select>
+                    <select id="nivelFilter" class="filter-select">
+                        <option value="">Nível</option>
+                        <option value="Júnior">Júnior</option>
+                        <option value="Pleno">Pleno</option>
+                        <option value="Sênior">Sênior</option>
+                        <option value="Especialista">Especialista</option>
+                    </select>
+                    <button class="btn-clear" id="clearFilters">
+                        <i class="fas fa-times"></i>
+                        Limpar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results">
+        <div class="container">
+            <div class="results-header">
+                <h2 class="results-title">Vagas disponíveis</h2>
+                <span class="results-count" id="resultsCount">0 vagas encontradas</span>
+            </div>
+            
+            <div class="jobs-grid" id="jobsGrid">
+                <!-- Jobs will be inserted here -->
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Carregando vagas...</p>
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>Nenhuma vaga encontrada</h3>
+                <p>Tente ajustar seus filtros de busca</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle"></h3>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be inserted here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-apply">
+                    <i class="fas fa-paper-plane"></i>
+                    Candidatar-se
+                </button>
+                <button class="btn-save">
+                    <i class="fas fa-heart"></i>
+                    Salvar vaga
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-briefcase"></i>
+                        <span>JobFinder</span>
+                    </div>
+                    <p>Conectando talentos com oportunidades</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links úteis</h4>
+                    <a href="#">Sobre nós</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Privacidade</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Para empresas</h4>
+                    <a href="#">Publicar vaga</a>
+                    <a href="#">Planos</a>
+                    <a href="#">Suporte</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 JobFinder. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
